@@ -1,1 +1,13 @@
-/*# sourceMappingURL=style.css.map */
+.person {
+  border: 1px solid black;
+  border-radius: 14px;
+  padding: 14px;
+  display: flex;
+  gap: 20px;
+  max-width: -moz-max-content;
+  max-width: max-content;
+}
+.person__card {
+  border: 1px solid black;
+  padding: 10px;
+}/*# sourceMappingURL=style.css.map */

@@ -8,6 +8,24 @@
     <title>Document</title>
 </head>
 <body>
+    <form class="form">
+        <input onchange="getUserInfo(event)" type="text" id="surname" placeholder="Surname">
+        <input onchange="getUserInfo(event)" type="text" id="name" placeholder="Name">
+        <input onchange="getUserInfo(event)" type="text" id="middle_name" placeholder="Middle name">
+    </form>
+    <div id="output" >
+        <span id="output__surname"></span>
+        <span id="output__name"></span>
+        <span id="output__middle_name"></span>
+    </div>
+
+    <section id="posts" class="person">
+        <div class="person__card">
+            <div class="person__card_initials"></div>
+            <p class="person__card_comments"></p>
+            <button>Show posts</button>
+        </div>
+    </section>
     <script src="scripts/script.js"></script>
 </body>
 </html>

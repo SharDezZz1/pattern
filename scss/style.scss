@@ -1,0 +1,14 @@
+.person {
+    border: 1px solid black;
+    border-radius: 14px;
+    padding: 14px;
+    display: flex;
+    gap: 20px;
+    max-width: max-content;
+
+    &__card{
+        border: 1px solid black;
+        padding: 10px;
+        }
+    
+}
