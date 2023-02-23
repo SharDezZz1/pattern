@@ -11,17 +11,24 @@
 
 <body>
     <div class="card">
+        <h2 class="card_header">Credit Card Details</h2>
         <form class="card__form" action="">
-            <label for="card-number">Card Number</label>
-            <input type="number" name="card-number" id="card-number" placeholder="1234 5678 9012 3456">
-            <label for="name-on-card">Name On Card</label>
-            <input type="text" name="name-on-card" id="username" placeholder="Name Surname">
+            <label class="top-input">
+                Card Number
+                <input type="number" id="card-number" placeholder="1234 5678 9012 3456">
+            </label>
+
+            <label class="top-input">
+                Name On Card
+                <input type="text" id="username" placeholder="Name Surname">
+            </label>
+
             <div class="card__form_date">
-                <div class="label_wrapper">
+                <div class="card__form_date_label_wrapper">
                     <label for="day">Expiry Date</label>
                     <label for="cvv">CVV/CVN</label>
                 </div>
-                <div class="date_inputs">
+                <div class="card__form_date_inputs">
                     <input type="number" name="day" min="0" max="31" placeholder="22">
                     <input type="number" name="year" min="2000" max="2023" placeholder="2023">
                     <input type="number" name="cvv" min="000" max="999" placeholder="***">
