@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,7 +8,28 @@
     <link rel="stylesheet" href="scss/style.css">
     <title>Document</title>
 </head>
+
 <body>
+    <div class="card">
+        <form class="card__form" action="">
+            <label for="card-number">Card Number</label>
+            <input type="number" name="card-number" id="card-number" placeholder="1234 5678 9012 3456">
+            <label for="name-on-card">Name On Card</label>
+            <input type="text" name="name-on-card" id="username" placeholder="Name Surname">
+            <div class="card__form_date">
+                <div class="label_wrapper">
+                    <label for="day">Expiry Date</label>
+                    <label for="cvv">CVV/CVN</label>
+                </div>
+                <div class="date_inputs">
+                    <input type="number" name="day" min="0" max="31" placeholder="22">
+                    <input type="number" name="year" min="2000" max="2023" placeholder="2023">
+                    <input type="number" name="cvv" min="000" max="999" placeholder="***">
+                </div>
+            </div>
+        </form>
+    </div>
     <script src="scripts/script.js"></script>
 </body>
+
 </html>
