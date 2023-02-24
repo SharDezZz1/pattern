@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,7 +8,50 @@
     <link rel="stylesheet" href="scss/style.css">
     <title>Document</title>
 </head>
+
 <body>
+    <section class="wrapper">
+        <h1>Inputs</h1>
+        <div class="wrapper__inputs">
+            <input type="text" class="text" placeholder="normal">
+            <input type="text" class="text valid" placeholder="valid" value="valid">
+            <input type="text" class="text invalid" placeholder="invalid" value="invalid">
+        </div>
+        <h1>Checkboxes</h1>
+        <div class="wrapper__checkboxes">
+            <label class="switch">
+                <input type="checkbox">
+                <span class="slider round"></span>
+            </label>
+
+            <label class="switch">
+                <input type="checkbox" checked>
+                <span class="slider round"></span>
+        </div>
+        <h1>Radio buttons</h1>
+        <div class="wrapper_radio">
+            <form action="">
+                <p style="display: inline-block;">Gender:</p>
+                <input type="radio" id="contactChoice1" name="gender" value="Man">
+                <input type="radio" id="contactChoice2" name="gender" value="Woman">
+            </form>
+        </div>
+        <h1>Buttons</h1>
+        <div class="wrapper_buttons">
+            <button class="active">Active</button>
+            <button class="active hover">Hover</button>
+            <button class="danger">Danger</button>
+            <button class="danger hover">Hover</button>
+            <button class="disabled">Disabled</button>
+            <button class="logic plus">+</button>
+            <button class="logic minus">-</button>
+        </div>
+        <h1>Textarea</h1>
+        <div class="wrapper_textarea">
+            <textarea class="textarea" cols="30" rows="10"></textarea>
+        </div>
+    </section>
     <script src="scripts/script.js"></script>
 </body>
+
 </html>
