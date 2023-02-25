@@ -1,0 +1,26 @@
+.container {
+    background-color: #132F59;
+    padding: 40px 130px 60px 130px;
+    position: relative;
+    & .background {
+        position: absolute;
+        left: 50%;
+        width: 50%;
+        z-index: 0;
+    }
+}   
+
+.work_stage__title {
+    padding: 20px;
+}
+
+.work_stage__card {
+
+    &_number {
+
+        h1 {
+            font-size: 86px;
+            margin-right: 10px;
+        }
+    }
+}
