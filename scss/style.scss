@@ -1,0 +1,119 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    height: 100px;
+    background-color: #b25050;
+    align-items: center;
+
+    &.active {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+
+    .header_nav {
+        display: flex;
+        gap: 20px;
+        list-style: none;
+        margin: 0;
+
+        @media only screen and (max-width: 800px) {
+            display: none;
+        }
+
+        li {
+
+            a {
+                text-decoration: none;
+                color: #fff;
+            }
+        }
+    }
+
+    nav {
+        display: flex;
+        gap: 20px;
+    }
+
+    .burger {
+        position: relative;
+        min-width: 30px;
+        min-height: 30px;
+        cursor: pointer;
+        display: none;
+
+        @media only screen and (max-width: 800px) {
+            display: block;
+        }
+
+        span {
+            min-height: 5px;
+            background-color: #fff;
+            width: 100%;
+            transition: 0.5s;
+        }
+
+        :first-child {
+            position: absolute;
+            top: 0px;
+            color: #fff;
+        }
+
+        :nth-child(2) {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #fff;
+        }
+
+        :last-child {
+            position: absolute;
+            bottom: 0;
+        }
+
+        &.active {
+            :first-child {
+                rotate: 45deg;
+                top: 50%;
+            }
+
+            :nth-child(2) {
+                display: none;
+            }
+
+            :last-child {
+                rotate: -45deg;
+                top: 50%;
+                bottom: auto;
+            }
+        }
+    }
+}
+
+
+
+.mobile__menu {
+    position: fixed;
+    top: 100px;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #fff;
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #b25050;
+    transition: 0.5s;
+    transform: translateX(100%);
+    &.active {
+        transform: translateX(0);
+        transition: 0.4s;
+    }
+
+    ul {
+        flex-direction: column;
+    }
+}
