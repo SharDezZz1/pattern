@@ -1,95 +1,114 @@
-header {
-  display: flex;
-  justify-content: space-between;
-  padding: 20px;
-  height: 100px;
-  background-color: #b25050;
-  align-items: center;
+.item {
+  display: inline-block;
+  padding: 12px;
+  border: 1px solid #ccc;
 }
-header.active {
+.item__title {
+  color: aquamarine;
+}
+.item__text {
+  color: rgb(255, 128, 0);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+form input,
+form textarea,
+form button {
+  margin: 12px 0;
+  max-width: 300px;
+}
+form #content {
+  display: none;
+}
+form #content.show {
+  display: block;
+}
+
+.header {
+  padding: 20px 0;
+  background-color: lightcoral;
+}
+.header ul {
+  margin: 0;
+  padding: 0;
+}
+.header ul li {
+  list-style: none;
+}
+.header ul li a {
+  text-decoration: none;
+  margin: 20px;
+  color: #fff;
+}
+.header.active {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
 }
-header .header_nav {
-  display: flex;
-  gap: 20px;
-  list-style: none;
-  margin: 0;
-}
-@media only screen and (max-width: 800px) {
-  header .header_nav {
-    display: none;
-  }
-}
-header .header_nav li a {
-  text-decoration: none;
-  color: #fff;
-}
-header nav {
-  display: flex;
-  gap: 20px;
-}
-header .burger {
+
+.burger_menu {
+  height: 30px;
+  width: 40px;
   position: relative;
-  min-width: 30px;
-  min-height: 30px;
   cursor: pointer;
-  display: none;
 }
-@media only screen and (max-width: 800px) {
-  header .burger {
-    display: block;
-  }
-}
-header .burger span {
-  min-height: 5px;
-  background-color: #fff;
+.burger_menu div {
+  min-height: 4px !important;
   width: 100%;
-  transition: 0.5s;
+  background-color: rgb(248, 246, 246);
 }
-header .burger :first-child {
+.burger_menu :first-child {
   position: absolute;
-  top: 0px;
-  color: #fff;
+  top: 0;
+  left: 0;
+  transition: 0.4s;
 }
-header .burger :nth-child(2) {
+.burger_menu :nth-child(2) {
   position: absolute;
   top: 50%;
+  left: 0;
   transform: translateY(-50%);
-  color: #fff;
 }
-header .burger :last-child {
+.burger_menu :last-child {
   position: absolute;
   bottom: 0;
+  left: 0;
+  transition: 0.4s;
 }
-header .burger.active :first-child {
-  rotate: 45deg;
+.burger_menu.active div {
+  background-color: rgb(248, 246, 246);
+}
+.burger_menu.active :first-child {
+  transform: rotate(45deg);
   top: 50%;
+  transition: 0.4s;
 }
-header .burger.active :nth-child(2) {
+.burger_menu.active :nth-child(2) {
   display: none;
 }
-header .burger.active :last-child {
-  rotate: -45deg;
+.burger_menu.active :last-child {
+  transform: rotate(-45deg);
   top: 50%;
   bottom: auto;
+  transition: 0.4s;
 }
 
 .mobile__menu {
   position: fixed;
-  top: 100px;
+  top: 70px;
   left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-color: #fff;
+  min-width: 100vw;
+  min-height: 100vh;
+  background-color: lightcoral;
   z-index: 999;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #b25050;
-  transition: 0.5s;
+  transition: 0.4s;
   transform: translateX(100%);
 }
 .mobile__menu.active {
@@ -98,4 +117,62 @@ header .burger.active :last-child {
 }
 .mobile__menu ul {
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.mobile__menu ul li a {
+  margin: 30px 0;
+  font-size: 30px;
+}
+
+.scroll-up {
+  width: 50px;
+  height: 50px;
+  background-color: lightcoral;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  visibility: hidden;
+  transition: 0.8s;
+  opacity: 0;
+  transform: translateY(100px);
+}
+.scroll-up:hover {
+  color: #fff;
+}
+.scroll-up.show {
+  visibility: visible;
+  transition: 0.8s;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.tabs__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  margin: 0;
+  padding: 12px;
+  background-color: lightcoral;
+  border: 1px solid black;
+  min-width: 100px;
+  cursor: pointer;
+}
+.tabs .selected {
+  background-color: rgb(255, 99, 99);
+  border: 3px dotted rgb(0, 0, 0);
+}
+.tabs__sort {
+  margin-top: 10px;
+}
+.tabs__content_list_card {
+  border: 1px solid lightcoral;
 }/*# sourceMappingURL=style.css.map */

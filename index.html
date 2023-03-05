@@ -12,131 +12,109 @@
 </head>
 
 <body>
-    <header>
-        <div class="logo">Logo</div>
-        <nav>
-            <ul class="header_nav">
-                <li><a href="#">test 1</a></li>
-                <li><a href="#">test 2</a></li>
-                <li><a href="#">test 3</a></li>
-                <li><a href="#">test 4</a></li>
-                <li><a href="#">test 5</a></li>
-            </ul>
-            <div class="burger" id="burger">
-                <span></span>
-                <span></span>
-                <span></span>
+    <a href="#" class="scroll-up">
+        <div>UP</div>
+    </a>
+    <header class="header">
+        <div class="container">
+            <div class="row">
+                <div class="col-4">
+                    <a href="/" class="logo">
+                        Logo
+                    </a>
+                </div>
+                <div class="d-none d-lg-block col-8">
+                    <nav>
+                        <ul class="d-flex justify-content-end
+                            align-items-center">
+                            <li><a href="#targetText">test1</a></li>
+                            <li><a href="#">test2</a></li>
+                            <li><a href="#">test3</a></li>
+                            <li><a href="#">test4</a></li>
+                            <li><a href="#">test5</a></li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <div class="col-8 d-lg-none d-flex justify-content-end">
+                    <div class="burger_menu">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                </div>
             </div>
-        </nav>
-        <div class="mobile__menu" id="mobile__menu">
+        </div>
+        <div class="mobile__menu">
             <nav>
-                <ul>
-                    <li><a href="#1"> test 1</a></li>
-                    <li>test 2</li>
-                    <li>test 3</li>
-                    <li>test 4</li>
-                    <li>test 5</li>
+                <ul class="d-flex justify-content-end
+                    align-items-center">
+                    <li><a href="#targetText">test1</a></li>
+                    <li><a href="#">test2</a></li>
+                    <li><a href="#">test3</a></li>
+                    <li><a href="#">test4</a></li>
+                    <li><a href="#">test5</a></li>
                 </ul>
             </nav>
         </div>
 
     </header>
+    <section class="form mb-3">
+        <form>
+            <input type="text" id="title" placeholder="Title">
+            <input type="text" id="description" placeholder="Description">
+            <input type="number" id="price" placeholder="Price">
+            <textarea id="content" placeholder="Content"></textarea>
+            <input onclick="showTextArea()" type="checkbox" id="show_textarea" name="show_textarea">
+            <button type="submit" onclick="addPost(event)">Add post</button>
+        </form>
+    </section>
+    <section id="posts_list"></section>
+    <form>
+        <input type="number" name="filter_price" id="filter_price" required />
+        <button onclick="filterPostsByPrice(event)">Filter</button>
+    </form>
 
-    <div id="1">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus soluta ea eos doloremque, debitis, distinctio
-        rem at atque illo in eveniet ex, iure laborum delectus eligendi ut recusandae. Nobis, repudiandae.
-    </div>
-    <div>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus soluta ea eos doloremque, debitis, distinctio
-        rem at atque illo in eveniet ex, iure laborum delectus eligendi ut recusandae. Nobis, repudiandae.
-    </div>
-    <div>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus soluta ea eos doloremque, debitis, distinctio
-        rem at atque illo in eveniet ex, iure laborum delectus eligendi ut recusandae. Nobis, repudiandae.
-    </div>
-    <div>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus soluta ea eos doloremque, debitis, distinctio
-        rem at atque illo in eveniet ex, iure laborum delectus eligendi ut recusandae. Nobis, repudiandae.
-    </div>
-    <div>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus soluta ea eos doloremque, debitis, distinctio
-        rem at atque illo in eveniet ex, iure laborum delectus eligendi ut recusandae. Nobis, repudiandae.
-    </div>
-    <div>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus soluta ea eos doloremque, debitis, distinctio
-        rem at atque illo in eveniet ex, iure laborum delectus eligendi ut recusandae. Nobis, repudiandae.
-    </div>
-    <div>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus soluta ea eos doloremque, debitis, distinctio
-        rem at atque illo in eveniet ex, iure laborum delectus eligendi ut recusandae. Nobis, repudiandae.
-    </div>
-    <div>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus soluta ea eos doloremque, debitis, distinctio
-        rem at atque illo in eveniet ex, iure laborum delectus eligendi ut recusandae. Nobis, repudiandae.
-    </div>
-    <div>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus soluta ea eos doloremque, debitis, distinctio
-        rem at atque illo in eveniet ex, iure laborum delectus eligendi ut recusandae. Nobis, repudiandae.
-    </div>
-    <div>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus soluta ea eos doloremque, debitis, distinctio
-        rem at atque illo in eveniet ex, iure laborum delectus eligendi ut recusandae. Nobis, repudiandae.
-    </div>
-    <div>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus soluta ea eos doloremque, debitis, distinctio
-        rem at atque illo in eveniet ex, iure laborum delectus eligendi ut recusandae. Nobis, repudiandae.
-    </div>
-    <div>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus soluta ea eos doloremque, debitis, distinctio
-        rem at atque illo in eveniet ex, iure laborum delectus eligendi ut recusandae. Nobis, repudiandae.
-    </div>
-    <div>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus soluta ea eos doloremque, debitis, distinctio
-        rem at atque illo in eveniet ex, iure laborum delectus eligendi ut recusandae. Nobis, repudiandae.
-    </div>
-    <div>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus soluta ea eos doloremque, debitis, distinctio
-        rem at atque illo in eveniet ex, iure laborum delectus eligendi ut recusandae. Nobis, repudiandae.
-    </div>
-    <div>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus soluta ea eos doloremque, debitis, distinctio
-        rem at atque illo in eveniet ex, iure laborum delectus eligendi ut recusandae. Nobis, repudiandae.
-    </div>
-    <div>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus soluta ea eos doloremque, debitis, distinctio
-        rem at atque illo in eveniet ex, iure laborum delectus eligendi ut recusandae. Nobis, repudiandae.
-    </div>
-    <div>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus soluta ea eos doloremque, debitis, distinctio
-        rem at atque illo in eveniet ex, iure laborum delectus eligendi ut recusandae. Nobis, repudiandae.
-    </div>
-    <div>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus soluta ea eos doloremque, debitis, distinctio
-        rem at atque illo in eveniet ex, iure laborum delectus eligendi ut recusandae. Nobis, repudiandae.
-    </div>
-    <div>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus soluta ea eos doloremque, debitis, distinctio
-        rem at atque illo in eveniet ex, iure laborum delectus eligendi ut recusandae. Nobis, repudiandae.
-    </div>
-    <div>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus soluta ea eos doloremque, debitis, distinctio
-        rem at atque illo in eveniet ex, iure laborum delectus eligendi ut recusandae. Nobis, repudiandae.
-    </div>
-    <div>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus soluta ea eos doloremque, debitis, distinctio
-        rem at atque illo in eveniet ex, iure laborum delectus eligendi ut recusandae. Nobis, repudiandae.
-    </div>
-    <div>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus soluta ea eos doloremque, debitis, distinctio
-        rem at atque illo in eveniet ex, iure laborum delectus eligendi ut recusandae. Nobis, repudiandae.
-    </div>
-    <div>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus soluta ea eos doloremque, debitis, distinctio
-        rem at atque illo in eveniet ex, iure laborum delectus eligendi ut recusandae. Nobis, repudiandae.
-    </div>
-    <div>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus soluta ea eos doloremque, debitis, distinctio
-        rem at atque illo in eveniet ex, iure laborum delectus eligendi ut recusandae. Nobis, repudiandae.
+    <section class="tabs">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 d-flex">
+                    <div class="tabs__item selected" data-id="all_content" data-products="1">Всі</div>
+                    <div class="tabs__item" data-id="electronics_content" data-products="2">Електроніка</div>
+                    <div class="tabs__item" data-id="fruits_content" data-products="3">Зервнові</div>
+                </div>
+                <div class="col-12">
+                    <div class="tabs__sort">
+                        <button class="tabs__sort_btn" id="sort_abs">За зростанням</button>
+                        <button class="tabs__sort_btn" id="sort_desc">За спаданням</button>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="tabs__content" data-products="1">
+                        <p>Всі </p>
+                        <div class="tabs__content_list" id="all_content">
+                        </div>
+                    </div>
+                    <div class="tabs__content d-none" data-products="2">
+                        <p> Електроніка - 2 </p>
+                        <div class="tabs__content_list" id="electronics_content">
+                        </div>
+                    </div>
+                    <div class="tabs__content d-none" data-products="3">
+                        <p> Хімія - 3</p>
+                        <div class="tabs__content_list" id="fruits_content">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="targetText">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum
+        explicabo blanditiis vel voluptate optio eaque dicta praesentium
+        deleniti aperiam in culpa minima soluta impedit, illo,
+        necessitatibus, quisquam sit cumque illum.
     </div>
 
     <script src="scripts/script.js"></script>
