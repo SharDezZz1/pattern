@@ -154,25 +154,38 @@ form #content.show {
   transform: translateY(0);
 }
 
+.tabs_content {
+  background-color: lightcoral;
+}
 .tabs__item {
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 12px;
-  margin: 0;
+  margin-right: 10px;
   padding: 12px;
-  background-color: lightcoral;
-  border: 1px solid black;
+  background-color: rgb(255, 193, 193);
   min-width: 100px;
   cursor: pointer;
+  transition: 0.5s;
+  border-bottom: none;
 }
 .tabs .selected {
-  background-color: rgb(255, 99, 99);
-  border: 3px dotted rgb(0, 0, 0);
+  transition: 0.5s;
+  background-color: lightcoral;
 }
 .tabs__sort {
   margin-top: 10px;
 }
+.tabs__content_list {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
 .tabs__content_list_card {
+  padding: 10px;
+  border-radius: 14px;
+  min-width: 300px;
+  max-width: 400px;
   border: 1px solid lightcoral;
 }/*# sourceMappingURL=style.css.map */
